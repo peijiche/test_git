@@ -1,0 +1,51 @@
+# daily sync up with the remote
+git checkout master
+git fetch
+git merge origin/master
+
+
+# create a new branch, work on it and push up to remote
+git checkout -b xxx_branch
+git add something
+git commit -m "add some"
+git fetch
+git push -u origin xxx_branch
+
+
+
+# check out others' branch xxx_branch
+# and provide feedback
+git checkout master
+git fetch
+git merge origin/master
+
+
+git checkout -b xxx_branch origin/xxx_branch
+git log
+git show 86fxsdfo
+
+git commit -am "add more"
+git fetech
+git push
+
+
+# check the difference from remote
+git fetch
+git log -p xxx_branch..origin/xxx_branch
+git merge origin/xxx_branch # fastward merge
+
+
+# merge changes with local master
+git checkout master
+git fetch
+git merge origin/master #merge any new changes from remote master
+git merge xxx_branch    #merge in changes from xxx_branch
+git push  # push to remote
+
+
+
+
+
+
+
+
